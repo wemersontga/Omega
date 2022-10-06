@@ -44,7 +44,7 @@ public class CaixaView extends JFrame {
 		//lblSelectAno.setBounds(230, 60, 100, 20);
 		//painel1.add(lblSelectAno);
 
-		JComboBox box1 = new JComboBox<>(new String[] { "2015" });
+		JComboBox box1 = new JComboBox<>(new String[] { "selecione" });
 		box1.setBounds(20, 10, 100, 20);
 		painel1.add(box1);
 
@@ -52,7 +52,7 @@ public class CaixaView extends JFrame {
 		lblcaixa.setBounds(230, 60, 100, 20);
 		painel1.add(lblcaixa);
 
-		JComboBox box2 = new JComboBox<>(new String[] { "Select" });
+		JComboBox box2 = new JComboBox<>(new String[] { "Selecione" });
 		box2.setBounds(280, 60, 100, 20);
 		painel1.add(box2);
 
@@ -60,7 +60,7 @@ public class CaixaView extends JFrame {
 		btnCaixa.setBounds(690, 60, 100, 40);
 		painel1.add(btnCaixa);
 
-		JButton btnMov = new JButton("+ movimentação");
+		JButton btnMov = new JButton("+ movimento");
 		btnMov.setBounds(800, 60, 150, 40);
 		painel1.add(btnMov);
 

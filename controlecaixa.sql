@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `teste` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `teste`;
+CREATE DATABASE  IF NOT EXISTS `controlecaixa` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `controlecaixa`;
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
--- Host: localhost    Database: teste
+-- Host: localhost    Database: controlecaixa
 -- ------------------------------------------------------
 -- Server version	8.0.28
 
@@ -82,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-06 13:11:21
+-- Dump completed on 2022-10-06 17:26:56
