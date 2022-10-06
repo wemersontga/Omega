@@ -22,7 +22,7 @@ public class CaixaView extends JFrame {
 
 	JLabel janeiro, fevereiro, marco, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro;
 	JPanel painel1 = new JPanel();
-	
+
 	public CaixaView() {
 		setLayout(null);
 		Font f = new Font("arial", Font.BOLD, 16);
@@ -36,13 +36,10 @@ public class CaixaView extends JFrame {
 		label.setBounds(100, 60, 100, 20);
 		label.setFont(f);
 		painel1.add(label);
-		
-		//-------------------------------------------//
+
+		// -- chamada de metodos de fora do construtor -----//
 		addData();
-		//-------------------------------------------//
-		//JLabel lblSelectAno = new JLabel("");
-		//lblSelectAno.setBounds(230, 60, 100, 20);
-		//painel1.add(lblSelectAno);
+		// ------------------------------------------------//
 
 		JComboBox box1 = new JComboBox<>(new String[] { "selecione" });
 		box1.setBounds(20, 10, 100, 20);
@@ -56,17 +53,16 @@ public class CaixaView extends JFrame {
 		box2.setBounds(280, 60, 100, 20);
 		painel1.add(box2);
 
-		JButton btnCaixa = new JButton("+ caixa");
+		JButton btnCaixa = new JButton("+ Caixa");
 		btnCaixa.setBounds(690, 60, 100, 40);
 		painel1.add(btnCaixa);
 
-		JButton btnMov = new JButton("+ movimento");
+		JButton btnMov = new JButton("+ Movimento");
 		btnMov.setBounds(800, 60, 150, 40);
 		painel1.add(btnMov);
 
 		add(painel1);
 
-		
 		// ------------------------------------------------
 		JPanel painel2 = new JPanel();
 		painel2.setLayout(null);
@@ -151,9 +147,9 @@ public class CaixaView extends JFrame {
 		painel2.add(painelMov);
 
 		add(painel2);
-		// ------------------------------------------------
+		
 
-		// Tabela------------------------------------------
+		//-- Tabela do form ------------------------------------------//
 		JPanel painel3 = new JPanel();
 		painel3.setLayout(null);
 		// painel3.setBackground(Color.gray);
@@ -166,7 +162,7 @@ public class CaixaView extends JFrame {
 		JTable tabela = new JTable();
 		tabela.setModel(new DefaultTableModel(
 
-				new Object[][] { { null, null }, // linha 1 da tabela
+				new Object[][] { { null, null }, // linha 1
 						{ null, null }, // linha 2
 
 				},
@@ -181,285 +177,271 @@ public class CaixaView extends JFrame {
 
 		add(painel3);
 
+		//-- código de criacao do form --//
 		setBounds(100, 50, 1000, 700);
 		setVisible(true);
 		setResizable(false);
 		setLocationRelativeTo(getOwner());
 
 	}
-	
-	//Esse metodo adiciona os meses no topo do form e limpa o construtor da classe;
+
+	// Esse metodo adiciona os meses no topo do form e limpa o construtor da classe;
 	public void addData() {
-		
+
 		janeiro = new JLabel();
 		janeiro.setText("Janeiro");
 		janeiro.setBounds(200, 0, 50, 20);
 		janeiro.addMouseListener(new MouseAdapter() {
-			
-			
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				janeiro.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
-					janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
-					janeiro.setForeground(Color.blue);
-				
-				
+
+				janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+				janeiro.setForeground(Color.blue);
+
 			}
-			
-			
+
 		});
 		painel1.add(janeiro);
-		
+
 		fevereiro = new JLabel("Fevereiro");
 		fevereiro.setBounds(250, 0, 60, 20);
 		fevereiro.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				fevereiro.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+
 				fevereiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				fevereiro.setForeground(Color.blue);
-				
-				
+
 			}
 		});
 		painel1.add(fevereiro);
-		
+
 		marco = new JLabel("Março");
 		marco.setBounds(320, 0, 60, 20);
 		marco.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				marco.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+
 				marco.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				marco.setForeground(Color.blue);
-				
-				
+
 			}
 		});
 		painel1.add(marco);
-		
+
 		abril = new JLabel("Abril");
 		abril.setBounds(370, 0, 60, 20);
 		abril.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				abril.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+
 				abril.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				abril.setForeground(Color.blue);
-				
-				
+
 			}
 		});
 		painel1.add(abril);
-		
+
 		maio = new JLabel("Maio");
 		maio.setBounds(420, 0, 60, 20);
 		maio.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				maio.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+
 				maio.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				maio.setForeground(Color.blue);
-				
-				
+
 			}
 		});
 		painel1.add(maio);
-		
+
 		junho = new JLabel("Junho");
 		junho.setBounds(470, 0, 60, 20);
 		junho.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				junho.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+
 				junho.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				junho.setForeground(Color.blue);
-				
-				
+
 			}
 		});
 		painel1.add(junho);
-		
+
 		julho = new JLabel("Julho");
 		julho.setBounds(520, 0, 60, 20);
 		julho.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				julho.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+
 				julho.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				julho.setForeground(Color.blue);
-				
-				
+
 			}
 		});
 		painel1.add(julho);
-		
+
 		agosto = new JLabel("Agosto");
 		agosto.setBounds(570, 0, 60, 20);
 		agosto.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				agosto.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+
 				agosto.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				agosto.setForeground(Color.blue);
-				
-				
+
 			}
 		});
 		painel1.add(agosto);
-		
+
 		setembro = new JLabel("Setembro");
 		setembro.setBounds(620, 0, 60, 20);
 		setembro.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				setembro.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+
 				setembro.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				setembro.setForeground(Color.blue);
-				
-				
+
 			}
 		});
 		painel1.add(setembro);
-		
+
 		outubro = new JLabel("Outubro");
 		outubro.setBounds(690, 0, 60, 20);
 		outubro.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				outubro.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+
 				outubro.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				outubro.setForeground(Color.blue);
-				
-				
+
 			}
 		});
 		painel1.add(outubro);
-		
+
 		novembro = new JLabel("Novembro");
 		novembro.setBounds(750, 0, 60, 20);
 		novembro.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				novembro.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+
 				novembro.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				novembro.setForeground(Color.blue);
-				
-				
+
 			}
 		});
 		painel1.add(novembro);
-		
+
 		dezembro = new JLabel("Dezembro");
 		dezembro.setBounds(820, 0, 60, 20);
 		dezembro.addMouseListener(new MouseAdapter() {
-			
+
 			@Override
 			public void mouseExited(MouseEvent e) {
-				//janeiro.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				dezembro.setForeground(Color.black);
-				
+
 			}
-			
+
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				
+
 				dezembro.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				dezembro.setForeground(Color.blue);
-				
-				
+
 			}
 		});
 		painel1.add(dezembro);
-		
+
 	}
 
 	public static void main(String args[]) {
