@@ -3,6 +3,8 @@ package br.com.caixa.view;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -18,11 +20,15 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 
+import br.com.caixa.dao.MovimentoDao;
+import br.com.caixa.model.Movimentacao;
+
 public class CaixaView extends JFrame {
 
-	JLabel janeiro, fevereiro, marco, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro;
-	JPanel painel1 = new JPanel();
-
+	public JLabel janeiro, fevereiro, marco, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro;
+	public JPanel painel1 = new JPanel();
+	
+	
 	public CaixaView() {
 		setLayout(null);
 		Font f = new Font("arial", Font.BOLD, 16);
@@ -55,10 +61,28 @@ public class CaixaView extends JFrame {
 
 		JButton btnCaixa = new JButton("+ Caixa");
 		btnCaixa.setBounds(690, 60, 100, 40);
+		btnCaixa.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new NovoMovimentoView();
+				
+			}
+		});
 		painel1.add(btnCaixa);
 
 		JButton btnMov = new JButton("+ Movimento");
 		btnMov.setBounds(800, 60, 150, 40);
+		btnMov.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource() == btnMov) {
+					pesquisar();
+				}
+				
+			}
+		});
 		painel1.add(btnMov);
 
 		add(painel1);
@@ -184,7 +208,27 @@ public class CaixaView extends JFrame {
 		setLocationRelativeTo(getOwner());
 
 	}
+	//
+	//
+	//
+	//
+	//
+	//
+	public void pesquisar() {
+		
+		MovimentoDao mDao2 = new MovimentoDao();
+		//Movimentacao mv = new Movimentacao();
+		mDao2.listarTudo();
+		
+		for (Movimentacao mo : mDao2.lista) {
+			
+			System.out.println("valor da lista todos: " + mDao2.lista);
+		}
+		
+	}
 
+	
+	
 	// Esse metodo adiciona os meses no topo do form e limpa o construtor da classe;
 	public void addData() {
 

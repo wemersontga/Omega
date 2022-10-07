@@ -6,13 +6,13 @@ import java.sql.SQLException;
 
 public class ConectaMysql {
 
-    static Connection con;
+    public static Connection con;
 
     public static Connection conectar() {
 
         try {
 
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             //con = DriverManager.getConnection("jdbc:mysql://127.0.0.1/controlecaixa?user=root&password=1234");
             con = DriverManager.getConnection("jdbc:mysql://localhost/controlecaixa", "root", "1234");
 
@@ -21,6 +21,7 @@ public class ConectaMysql {
         } catch (ClassNotFoundException e) {
 
             System.out.println("Class.forName, incorreto\n" + e.getMessage());
+            e.printStackTrace();
 
         } catch (SQLException e) {
 
