@@ -59,7 +59,7 @@ public class MovimentoDaoTeste {
 	}
 
 	// Teste metodo listar dados
-	public static void listarTudo() {
+	public static void listarTudoTeste() {
 
 		new ConectaMysql();
 		listaMovlAll = new ArrayList<Movimentacao>();
@@ -240,7 +240,7 @@ public class MovimentoDaoTeste {
 		Movimentacao m = new Movimentacao();
 
 		// inserir();
-		listarTudo();
+		listarTudoTeste();
 		// listarPorId(m);
 		//update();
 		//deletar();

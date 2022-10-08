@@ -222,7 +222,7 @@ public class CaixaView extends JFrame {
 		
 		for (Movimentacao mo : mDao2.lista) {
 			
-			System.out.println("valor da lista todos: " + mDao2.lista);
+			System.out.println("valor da lista todos: " + mo.getValor());
 		}
 		
 	}

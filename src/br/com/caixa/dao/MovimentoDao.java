@@ -78,19 +78,19 @@ public class MovimentoDao {
 				mv.setCaixa(rs.getString("caixa"));
 				mv.setDescricao(rs.getString("descricao"));
 				mv.setValor(rs.getDouble("valor"));
-				System.out.println("mv: " + mv); //debug
+				//System.out.println("mv: " + mv); //debug
 
-				listaMovlAll.add(mv);
-				System.out.println("MovimentoDaoTeste: Metodo:listagem() *OK*"); // Debug;
+				//listaMovlAll.add(mv);
+				//System.out.println("MovimentoDaoTeste: Metodo:listagem() *OK*"); // Debug;
 				
 				lista.add(mv);
 				
-				 for (Movimentacao mto : listaMovlAll) {
-					 System.out.println("ID: " + mto.getId()); System.out.println("idCaixa: " + mto.getIdCaixa());
-				 System.out.println("Data: " + mto.getData()); System.out.println("tipo: " +
-				 mto.getTipo()); System.out.println("Caixa: " + mto.getCaixa());
-				 System.out.println("Descricao: " + mto.getDescricao());
-				 System.out.println("Valor: " + mto.getValor()); }
+				 //for (Movimentacao mto : listaMovlAll) {
+				//System.out.println("ID: " + mto.getId()); System.out.println("idCaixa: " + mto.getIdCaixa());
+				 //System.out.println("Data: " + mto.getData()); System.out.println("tipo: " +
+				 //mto.getTipo()); System.out.println("Caixa: " + mto.getCaixa());
+				 //System.out.println("Descricao: " + mto.getDescricao());
+				 //System.out.println("Valor: " + mto.getValor()); }
 				 
 
 			}
